@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{%block title%}
+    Login
+{%endblock%}
+
+{%block body%}
+
+{%block top%}
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>New Post</a></li>
+    </ul>
+    {%endblock%}   
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            Welcome {{user}}
+        </div>
+    </div>
+</nav>
+{%for post in posted%}
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <p>{{post.user_id}}   {{post.date_posted.strftime('%Y-%m-%d')}}</p>
+        <p>{{post.title}}</p>
+        <p>{{post.content}}</p>
+    </div>
+</nav>
+{%endfor%}
+<p class="btn btn-danger"><a href="#" style="color: white;">Logout</a></p>
+{%endblock%}

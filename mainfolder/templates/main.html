@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block title%}
+    Home
+{%endblock%}
+
+
+    {%block top%}
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{url_for('register.registerbase')}}"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+        <li><a href="{{url_for('login.loginbase')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+     {%endblock%}
+    {%block body%}   
+    <div class="container text-info" style="margin-left:40px;margin-top:75px;"><h3>
+        Welcome to CitizenProject
+        </h3>
+    </div>
+    {%endblock%}

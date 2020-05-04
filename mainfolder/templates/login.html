@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{%block title%}
+    Login
+{%endblock%}
+
+{%block body%}
+<div class="container text-info" style="margin-left:40px;margin-top:75px;">
+<div class="col-sm-4" style="margin-left: 24%;">
+    {%with messages = get_flashed_messages()%}
+    {%if messages%}
+        {%for msg in messages%}
+            <p>{{msg}}</p>
+        {%endfor%}
+    {%endif%}
+{%endwith%}
+    <form action="#" method="POST" class="form-group">
+        <p><input type="email" class="form-control" placeholder="Enter Email" name="lemail"></p>
+        <p><input type="password" class="form-control"  placeholder="Enter Password" name="lpw"></p>
+        <p><input class="btn btn-primary" type="submit" value="Login"></p>
+    </form>
+    </div>
+    </div>
+{%endblock%}
+{%block top%}
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{{url_for('register.registerbase')}}"><span class="glyphicon glyphicon-user"></span>Signup</a></li>
+  </ul>
+  {%endblock%}
